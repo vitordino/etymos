@@ -1,0 +1,70 @@
+{
+  "name": "etymos",
+  "version": "0.0.0",
+  "description": "lean grid for react",
+  "author": "Vitor Dino <vitor@kunstdesign.com.br>",
+  "homepage": "https://etymos.vitordino.com",
+  "license": "MIT",
+  "engines": {
+    "node": ">=8"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vitordino/etymos.git"
+  },
+  "bugs": "https://github.com/vitordino/etymos/issues",
+  "keywords": [
+    "react",
+    "react-component",
+    "grid",
+    "flexbox",
+    "styled-components",
+    "layout"
+  ],
+  "main": "dist/index.js",
+  "module": "dist/etymos.esm.js",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "start": "tsdx watch",
+    "build": "tsdx build",
+    "test": "tsdx test --env=jsdom",
+    "prepublishOnly": "npm run build"
+  },
+  "peerDependencies": {
+    "react": ">=16.8",
+    "styled-components": ">=4"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
+  },
+  "prettier": {
+    "semi": false,
+    "singleQuote": true,
+    "jsxSingleQuote": true,
+    "trailingComma": "all"
+  },
+  "devDependencies": {
+    "@types/jest": "^24.0.15",
+    "@types/react": "^16.8.22",
+    "@types/react-dom": "^16.8.4",
+    "@types/styled-components": "^4.1.16",
+    "husky": "^3.0.0",
+    "prettier": "^1.18.2",
+    "pretty-quick": "^1.11.1",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "styled-components": "^4.3.2",
+    "tsdx": "^0.7.2",
+    "tslib": "^1.10.0",
+    "typescript": "^3.5.2"
+  },
+  "dependencies": {
+    "hooks": "^0.3.2",
+    "types": "^0.1.1"
+  }
+}

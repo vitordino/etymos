@@ -1,0 +1,3 @@
+[build]
+  command = "cd example && yarn && yarn build"
+  publish = "example/dist"
