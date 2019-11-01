@@ -62,7 +62,6 @@ provides data derived from closest `<Provider/>` and / or `window size`<sup>\*</
 
 outputs an `object` with:
 
-- `columns`: columns count
 - `breakpoints`: breakpoints object as described on Provider
 
 #### `useWindowSize`
