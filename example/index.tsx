@@ -1,5 +1,4 @@
 import React from 'react'
-import styled from 'styled-components'
 import { render } from 'react-dom'
 import styled from 'styled-components'
 import {
@@ -33,22 +32,27 @@ const App = () => {
 	const visibleBreakpoints = useBreakpoints()
 	const currentBreakpoint = useCurrentBreakpoint()
 	return (
-		<div style={{maxWidth: 600, margin: 'auto', padding: '1rem'}}>
-			<h1 style={{fontSize: '3rem', marginBottom: '1rem'}}>ἔτυμος</h1>
+		<div style={{ maxWidth: 600, margin: 'auto', padding: '1rem' }}>
+			<h1 style={{ fontSize: '3rem', marginBottom: '1rem' }}>ἔτυμος</h1>
 			<StyledAbove>StyledAbove</StyledAbove>
 			<StyledBelow>StyledBelow</StyledBelow>
-			<br/>
+			<br />
 			<pre>window size: {JSON.stringify(windowSize, null, 2)}</pre>
-			<br/>
+			<br />
 			<pre>{mediaQuery ? 'lorem ipsum above' : 'lorem ipsum below'}</pre>
-			<br/>
+			<br />
 			<pre>visible breakpoints: {JSON.stringify(visibleBreakpoints)}</pre>
-			<br/>
+			<br />
 			<pre>current breakpoint: {JSON.stringify(currentBreakpoint)}</pre>
-			<br/>
+			<br />
 			<pre>all breakpoints: {JSON.stringify(theme.breakpoints, null, 2)}</pre>
 		</div>
 	)
 }
 
-render(<Provider><App/></Provider>, document.querySelector('#root'))
+render(
+	<Provider>
+		<App />
+	</Provider>,
+	document.querySelector('#root'),
+)
