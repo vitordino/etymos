@@ -8,15 +8,12 @@ cache:
   yarn: true
   directories:
     - node_modules
-    - example/node_modules
 
 install:
   - yarn --frozen-lockfile --silent --non-interactive
-  - yarn --frozen-lockfile --silent --non-interactive --cwd example
 
 script:
   - yarn type-check
-  - yarn --cwd example type-check
   - yarn --cwd type-check
 
 after_success:
