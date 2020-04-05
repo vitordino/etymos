@@ -5,6 +5,7 @@
   "license": "MIT",
   "scripts": {
     "start": "parcel index.html",
+    "type-check": "tsc --noEmit",
     "build": "parcel build index.html"
   },
   "alias": {
