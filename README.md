@@ -1,9 +1,6 @@
 # ἔτυμος
 
 [![npm package][npm-badge]][npm]
-[![demo][demo-badge]][demo]
-[![Travis][build-badge]][build]
-[![Coveralls][coveralls-badge]][coveralls]
 [![Bundlephobia][bundlephobia-badge]][bundlephobia]
 
 > **etymos** is a responsive, mobile-first, toolkit for `react` + `styled-components`.
@@ -162,11 +159,5 @@ this repo is open to [`issues`](https://github.com/vitordino/etymos/issues) and 
 
 [npm-badge]: https://img.shields.io/npm/v/etymos.svg?style=flat-square
 [npm]: https://npmjs.org/package/etymos
-[demo-badge]: https://img.shields.io/badge/www-demo-lightgray.svg?style=flat-square
-[demo]: https://etymos.vitordino.com/
-[build-badge]: https://img.shields.io/travis/vitordino/etymos/master.svg?style=flat-square
-[build]: https://travis-ci.org/vitordino/etymos
-[coveralls-badge]: https://img.shields.io/coveralls/vitordino/etymos/master.svg?style=flat-square
-[coveralls]: https://coveralls.io/github/vitordino/etymos
 [bundlephobia-badge]: https://img.shields.io/bundlephobia/minzip/etymos.svg?style=flat-square
 [bundlephobia]: https://bundlephobia.com/result?p=etymos
