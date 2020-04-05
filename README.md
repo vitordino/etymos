@@ -1,6 +1,8 @@
 # ἔτυμος
 
 [![npm package][npm-badge]][npm]
+[![Travis][travis-badge]][travis]
+[![Coveralls][coveralls-badge]][coveralls]
 [![Bundlephobia][bundlephobia-badge]][bundlephobia]
 
 > **etymos** is a responsive, mobile-first, toolkit for `react` + `styled-components`.
@@ -31,7 +33,7 @@ this package provides a `Provider`, some `hooks` and a `styled-components` helpe
 
 receives a `breakpoints` prop (if not present, this package provides a default)
 
-this prop is an object with other objects containing *at least* a `width` number (in pixels), but it can contain more entries (useful together with [`mapTheme`](#maptheme) function)
+this prop is an object with other objects containing _at least_ a `width` number (in pixels), but it can contain more entries (useful together with [`mapTheme`](#maptheme) function)
 
 ```jsx
 const breakpoints = {
@@ -109,13 +111,18 @@ this helper will create props with your breakpoints keys, that will be treated b
 ```jsx
 const Spacer = styled.div`
   display: block;
-  ${mapBreakpoints((value, props) => `
+  ${mapBreakpoints(
+    (value, props) => `
     margin: ${value}rem;
-  `)}
+  `,
+  )}
 `
 
-const App = () => <Provider><Spacer xs={0} md={1} /></Provider>
-
+const App = () => (
+  <Provider>
+    <Spacer xs={0} md={1} />
+  </Provider>
+)
 ```
 
 #### `mapTheme`
@@ -123,27 +130,29 @@ const App = () => <Provider><Spacer xs={0} md={1} /></Provider>
 similar to `mapBreakpoints` this helper can read entries on each breakpoint (defined by the `breakpoints` object) and treat them with a function that will render inside `above` blocks.
 
 ```jsx
-
 const breakpoints = {
-  sm: {width: 0, gutter: 0.5},
-  md: {width: 0},
-  lg: {width: 0, gutter: 1},
+  sm: { width: 0, gutter: 0.5 },
+  md: { width: 0 },
+  lg: { width: 0, gutter: 1 },
 }
 
 const Spacer = styled.div`
   display: block;
-  ${mapTheme((value, props) => value.gutter && `
+  ${mapTheme(
+    (value, props) =>
+      value.gutter &&
+      `
     margin: ${value.gutter}rem;
-  `)}
+  `,
+  )}
 `
 
 const App = () => (
   <Provider breakpoints={breakpoints}>
-    <Spacer/>
+    <Spacer />
   </Provider>
 )
 ```
-
 
 ---
 
@@ -159,5 +168,9 @@ this repo is open to [`issues`](https://github.com/vitordino/etymos/issues) and 
 
 [npm-badge]: https://img.shields.io/npm/v/etymos.svg?style=flat-square
 [npm]: https://npmjs.org/package/etymos
+[travis-badge]: https://img.shields.io/travis/vitordino/etymos/master.svg?style=flat-square
+[travis]: https://travis-ci.org/vitordino/etymos
+[coveralls-badge]: https://img.shields.io/coveralls/vitordino/etymos/master.svg?style=flat-square
+[coveralls]: https://coveralls.io/github/vitordino/etymos
 [bundlephobia-badge]: https://img.shields.io/bundlephobia/minzip/etymos.svg?style=flat-square
 [bundlephobia]: https://bundlephobia.com/result?p=etymos
