@@ -1,3 +1,17 @@
+# a note from the author (vitordino, 2021)
+
+this lib was created over 3 years ago (it’s foundation dating around 5).
+
+since then, the landscape on CSS-in-JS has changed drastically, i strongly believe now that [stitches](https://github.com/modulz/stitches) not only solves most of what this lib proposes but also is a better replacement for `styled-components` as a whole — apart from runtime interpolations.
+
+due to the aforementioned reasons, i’m declaring this lib deprecated. **if you’re using this lib, your code will still work**.
+
+As this is just a thin layer of abstractions on top of `styled-components`, it might still make sense for you to maintain it on a project that’s already in production.
+
+huge thanks to everyone that used, contributed, sent feedbacks or interacted with over the years.
+
+---
+
 # ἔτυμος
 
 [![npm package][npm-badge]][npm]
